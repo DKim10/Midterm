@@ -8,6 +8,7 @@ public class Staff extends Employee {
 
 	 private eTitle Title;
 	 
+	 //cretes an easy way to use get and set methods
 	 public Staff(){
 		 
 	 }

@@ -42,6 +42,7 @@ public abstract class Person {
 		return DOB;
 	}
 
+	//Handels DOB Exception
 	public void setDOB(Date DOB) throws PersonException {
 		if(DOB.getYear()+1900 > ((DOB.getYear()+1900) + (2115 - DOB.getYear()))){
 			throw new PersonException(this);}
@@ -59,6 +60,7 @@ public abstract class Person {
 		return address;
 	}
 
+	//Handels Phone exception
 	public void setPhone(String newPhone_number) throws PersonException {
 		String regex = "^\\(?([0-9]{3})\\)?[-]?([0-9]{3})[-]?([0-9]{4})$";
 		Pattern pattern = Pattern.compile(regex);
@@ -117,7 +119,8 @@ public abstract class Person {
 	public void PrintDOB() {
 		System.out.println(this.DOB);
 	}
-
+	
+//Handels DOB exception
 	public int PrintAge() throws PersonException{
 		Calendar today = Calendar.getInstance();
 		Calendar birthDate = Calendar.getInstance();
@@ -152,6 +155,7 @@ public abstract class Person {
 
 	}
 	
+	//handels Phone number Exception
 	public String PrintPhoneNumber() throws PersonException{
 		String regex = "^\\(?([0-9]{3})\\)?[-]?([0-9]{3})[-]?([0-9]{4})$";
 		Pattern pattern = Pattern.compile(regex);

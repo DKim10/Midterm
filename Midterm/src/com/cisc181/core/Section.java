@@ -12,10 +12,12 @@ public class Section {
 	
 	private int RoomID;
 	
+	//no arg constructor
 	public Section(){
 		
 	}
 	
+	//Two arg Constructor
 	public Section(UUID CourseID, UUID SemesterID, UUID SectionID, int RoomID){
 		
 		this.CourseID = CourseID;
